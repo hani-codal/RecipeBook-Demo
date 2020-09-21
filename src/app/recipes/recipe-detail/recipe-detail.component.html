@@ -1,0 +1,32 @@
+<div class="row mt-4">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <a *ngFor="let recipe of recipes" style="cursor: pointer;">
+        <li class="list-group-item">
+          <div class="row">
+            <div class="col-md-12">
+              <img [src]="recipe.imagepath" [alt]="recipe.name" style="width:730px;height: 600px;">
+              <h2>{{recipe.name}}</h2>
+              <button class="btn btn-success" style="">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false" style="color: white; ">
+                  Manage Recipe
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">To Shopping list</a>
+                  <a class="dropdown-item" href="#">Edit Recipe</a>
+                  <a class="dropdown-item" href="#">Delete Recipe </a>
+                </div>
+              </button>
+              <p>{{recipe.discription}}</p>
+              <p>Ingredients</p>
+              <ul class="list-group">
+                <li class="list-group-item">Vestibulum at eros</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </a>
+    </ul>
+  </div>
+</div>
